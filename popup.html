@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>넷플릭스 작품 숨기기</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 12px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 13px;
+        width: 260px;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 8px;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+      }
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 90px;
+        resize: vertical;
+      }
+      button {
+        margin-top: 8px;
+        width: 100%;
+        padding: 6px 0;
+        border: none;
+        background: #e50914;
+        color: #ffffff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: default;
+      }
+      .hint {
+        margin-top: 6px;
+        color: #555555;
+        font-size: 11px;
+      }
+      .status {
+        margin-top: 6px;
+        font-size: 12px;
+      }
+      .status.ok {
+        color: #0a7c2f;
+      }
+      .status.error {
+        color: #c0392b;
+      }
+      .match-mode {
+        margin-top: 8px;
+      }
+      .match-mode label {
+        margin-bottom: 4px;
+      }
+      .match-mode select {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>넷플릭스 툴 설정</h1>
+    <section>
+      <label>
+        <input type="checkbox" id="tool-netflix-hider" />
+        넷플릭스 작품 숨기기 사용
+      </label>
+    </section>
+    <hr />
+    <h1>숨길 작품 이름</h1>
+    <label for="titles">
+      한 줄에 하나씩 작품 제목을 적어주세요.
+    </label>
+    <textarea id="titles" placeholder="예)
+오징어 게임
+기묘한 이야기"></textarea>
+    <div class="match-mode">
+      <label for="match-mode">필터 방식</label>
+      <select id="match-mode">
+        <option value="contains">포함 검색 (공격적)</option>
+        <option value="exact">완전 일치 (보수적)</option>
+      </select>
+    </div>
+    <button id="save">저장</button>
+    <div class="hint">
+      저장 후 넷플릭스 페이지를 새로고침하면 해당 작품들이 목록에서 숨겨집니다.
+    </div>
+    <div id="status" class="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
