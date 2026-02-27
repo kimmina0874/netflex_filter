@@ -1,70 +1,46 @@
-# 넷플릭스 작품 숨기기 필터 개인정보처리방침
+# Privacy Policy for Netflix Title Hider Filter
 
-크롬 확장 프로그램 **“넷플릭스 작품 숨기기 필터”**(이하 “본 확장 프로그램”)에서 처리하는 정보에 대해 설명합니다.
+**Version 1.0**
+**Last Updated: 2026-02-25**
 
----
+## English
 
-## 1. 수집하는 정보
+### 1. Introduction
+This Privacy Policy describes how the **Netflix Title Hider Filter** extension collects, uses, and protects your information. We are committed to ensuring your privacy is protected.
 
-본 확장 프로그램은 사용자를 식별할 수 있는 **개인정보(이름, 이메일 주소, 계정 ID, 결제 정보 등)**를 수집하지 않습니다.
+### 2. Data Collection and Usage
+This extension operates **locally** on your browser.
+- **No Remote Data Collection**: We do not transmit your personal data, browsing history, or Netflix viewing activity to any external servers.
+- **Local Storage**: The titles you choose to hide and your settings (e.g., filter mode) are stored locally in your browser using the Chrome Storage API (`chrome.storage.sync`). This data is synced across your signed-in Chrome browsers by Google, but we do not have access to it.
 
-본 확장 프로그램이 처리하는 정보는 다음과 같이, 기능 동작을 위한 설정 정보에 한정됩니다.
+### 3. Permissions
+- **Storage**: Required to save your list of blocked titles and settings.
+- **Host Permissions (https://www.netflix.com/*)**: Required to access Netflix pages to hide the titles you have specified. The extension only modifies the DOM (Document Object Model) to hide elements matching your blocked list. It does not read or store your login credentials or payment information.
 
-- 사용자가 직접 입력한 숨길 작품 제목 목록  
-- 넷플릭스 작품 숨기기 기능의 on/off 상태  
-- 필터 방식 설정(포함 검색 / 완전 일치)
+### 4. Third-Party Services
+This extension does not use any third-party analytics or tracking services.
 
-이 정보는 Chrome의 `chrome.storage` API를 통해 사용자의 브라우저 내에만 저장되며, 개발자 또는 제3자의 서버로 전송되지 않습니다.
-
----
-
-## 2. 정보의 이용 목적
-
-위 정보는 다음 목적에 한하여 사용됩니다.
-
-- 사용자가 입력한 제목에 해당하는 넷플릭스 작품 카드를 화면에서 숨기기  
-- 사용자의 설정 상태(기능 on/off, 필터 방식)를 기억하여 편의 제공
-
-이 외의 목적으로 정보를 이용하지 않습니다.
+### 5. Contact
+If you have any questions about this Privacy Policy, please contact the developer via the support email provided in the Chrome Web Store listing.
 
 ---
 
-## 3. 정보의 보관 및 삭제
+## 한국어 (Korean)
 
-- 정보는 사용자의 브라우저 내 `chrome.storage` 영역에 저장됩니다.  
-- 사용자가 확장 프로그램을 제거하거나 브라우저 데이터를 삭제하면 함께 삭제됩니다.  
-- 사용자는 언제든지 크롬 확장 프로그램 관리 화면에서 본 확장 프로그램을 제거할 수 있습니다.
+### 1. 개요
+**Netflix Title Hider Filter** 확장 프로그램은 사용자의 개인정보를 소중하게 생각합니다. 본 개인정보처리방침은 본 확장 프로그램이 정보를 수집, 사용, 보호하는 방식을 설명합니다.
 
----
+### 2. 데이터 수집 및 사용
+이 확장 프로그램은 브라우저 내에서 **로컬**로 작동합니다.
+- **원격 데이터 수집 없음**: 사용자의 개인 정보, 인터넷 기록, 넷플릭스 시청 기록 등을 외부 서버로 전송하지 않습니다.
+- **로컬 저장소**: 사용자가 숨기기로 설정한 작품 목록과 설정값은 Chrome Storage API(`chrome.storage.sync`)를 사용하여 브라우저에 저장됩니다. 이 데이터는 Google 계정을 통해 동기화될 수 있으나, 개발자는 이 데이터에 접근할 수 없습니다.
 
-## 4. 제3자 제공 및 데이터 판매
+### 3. 권한 (Permissions)
+- **Storage (저장소)**: 차단할 작품 목록과 설정을 저장하기 위해 필요합니다.
+- **Host Permissions (https://www.netflix.com/*)**: 넷플릭스 페이지에 접근하여 사용자가 지정한 작품을 숨기기 위해 필요합니다. 이 확장 프로그램은 화면의 요소(DOM)를 숨기는 기능만 수행하며, 사용자의 로그인 정보나 결제 정보를 읽거나 저장하지 않습니다.
 
-본 확장 프로그램은 수집된 정보를 제3자에게 제공하거나 판매하지 않습니다.  
-또한 광고, 분석, 프로파일링, 맞춤형 타게팅 등의 목적으로 정보를 이용하지 않습니다.
+### 4. 제3자 서비스
+이 확장 프로그램은 별도의 분석 도구나 추적 서비스를 사용하지 않습니다.
 
----
-
-## 5. 원격 코드 및 외부 서비스 사용 여부
-
-본 확장 프로그램은 원격 코드를 사용하지 않으며, 외부 서버에서 실행 코드를 불러와 실행하지 않습니다.  
-모든 실행 코드는 크롬 웹 스토어에 업로드된 확장 패키지 안에 포함되어 있습니다.
-
----
-
-## 6. 문의처
-
-본 확장 프로그램과 개인정보 처리에 관한 문의는 아래 이메일로 연락해 주시기 바랍니다.
-
-- 이메일: `kimmina9070@gmail.com`
-
----
-
-## 7. 개인정보처리방침의 변경
-
-법령 변경 또는 기능 개선 등에 따라 본 개인정보처리방침이 변경될 수 있으며,  
-중요한 변경 사항이 있을 경우 크롬 웹 스토어 상품 설명 또는 본 페이지를 통해 안내합니다.
-
----
-
-버전 1.0 · 마지막 업데이트: 2025-01-01
-
+### 5. 문의
+본 개인정보처리방침에 대해 궁금한 점이 있으시면 Chrome 웹 스토어의 지원 이메일을 통해 문의해 주세요.

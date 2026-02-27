@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="ko">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>넷플릭스 작품 숨기기</title>
+    <title data-i18n="popupTitle"></title>
     <style>
       body {
         margin: 0;
@@ -68,34 +68,29 @@
     </style>
   </head>
   <body>
-    <h1>넷플릭스 툴 설정</h1>
+    <h1 data-i18n="popupTitle"></h1>
     <section>
       <label>
         <input type="checkbox" id="tool-netflix-hider" />
-        넷플릭스 작품 숨기기 사용
+        <span data-i18n="enableTool"></span>
       </label>
     </section>
     <hr />
-    <h1>숨길 작품 이름</h1>
-    <label for="titles">
-      한 줄에 하나씩 작품 제목을 적어주세요.
+    <h1 data-i18n="hiddenTitlesTitle"></h1>
+    <label for="titles" data-i18n="hiddenTitlesLabel">
     </label>
-    <textarea id="titles" placeholder="예)
-오징어 게임
-기묘한 이야기"></textarea>
+    <textarea id="titles"></textarea>
     <div class="match-mode">
-      <label for="match-mode">필터 방식</label>
+      <label for="match-mode" data-i18n="filterModeLabel"></label>
       <select id="match-mode">
-        <option value="contains">포함 검색 (공격적)</option>
-        <option value="exact">완전 일치 (보수적)</option>
+        <option value="contains" data-i18n="modeContains"></option>
+        <option value="exact" data-i18n="modeExact"></option>
       </select>
     </div>
-    <button id="save">저장</button>
-    <div class="hint">
-      저장 후 넷플릭스 페이지를 새로고침하면 해당 작품들이 목록에서 숨겨집니다.
+    <button id="save" data-i18n="saveBtn"></button>
+    <div class="hint" data-i18n="hintText">
     </div>
     <div id="status" class="status"></div>
     <script src="popup.js"></script>
   </body>
 </html>
-

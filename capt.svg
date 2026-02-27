@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <!-- 배경 -->
+  <rect width="640" height="400" fill="#0b1120" />
+
+  <!-- 브라우저 창 틀 -->
+  <rect x="20" y="20" width="600" height="360" rx="12" fill="#020617" stroke="#1f2937" stroke-width="2" />
+  <!-- 상단 바 -->
+  <rect x="20" y="20" width="600" height="32" rx="12" fill="#111827" />
+  <!-- 상단 바 버튼들 -->
+  <circle cx="40" cy="36" r="5" fill="#f97373" />
+  <circle cx="58" cy="36" r="5" fill="#facc15" />
+  <circle cx="76" cy="36" r="5" fill="#34d399" />
+  <!-- 상단 타이틀 -->
+  <text x="100" y="40" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13">
+    넷플릭스 작품 숨기기 필터 · 예시 화면
+  </text>
+
+  <!-- 좌측: 스트리밍 사이트 화면 (추상화) -->
+  <rect x="32" y="64" width="340" height="300" rx="8" fill="#020617" stroke="#111827" stroke-width="1.5" />
+
+  <!-- 좌측 상단 섹션 제목 -->
+  <text x="44" y="88" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13">
+    추천 콘텐츠
+  </text>
+
+  <!-- 카드 그리드 (3x2) -->
+  <!-- 1행 -->
+  <rect x="44" y="102" width="96" height="70" rx="6" fill="#1f2937" />
+  <rect x="152" y="102" width="96" height="70" rx="6" fill="#1f2937" />
+  <rect x="260" y="102" width="96" height="70" rx="6" fill="#1f2937" />
+  <!-- 2행 -->
+  <rect x="44" y="186" width="96" height="70" rx="6" fill="#1f2937" />
+  <rect x="152" y="186" width="96" height="70" rx="6" fill="#1f2937" />
+  <rect x="260" y="186" width="96" height="70" rx="6" fill="#1f2937" />
+
+  <!-- 카드 제목 텍스트 (간단한 바 형태) -->
+  <rect x="46" y="176" width="70" height="6" rx="3" fill="#4b5563" />
+  <rect x="154" y="176" width="80" height="6" rx="3" fill="#4b5563" />
+  <rect x="262" y="176" width="65" height="6" rx="3" fill="#4b5563" />
+  <rect x="46" y="260" width="75" height="6" rx="3" fill="#4b5563" />
+  <rect x="154" y="260" width="82" height="6" rx="3" fill="#4b5563" />
+  <rect x="262" y="260" width="70" height="6" rx="3" fill="#4b5563" />
+
+  <!-- 숨김 처리된 카드 2개 (반투명 오버레이 + 아이콘 + 텍스트) -->
+  <!-- 카드 1: 왼쪽 위 -->
+  <rect x="44" y="102" width="96" height="70" rx="6" fill="rgba(15,23,42,0.7)" />
+  <circle cx="92" cy="137" r="14" fill="none" stroke="#e5e7eb" stroke-width="3" />
+  <line x1="82" y1="127" x2="102" y2="147" stroke="#f97316" stroke-width="3" stroke-linecap="round" />
+  <text x="92" y="162" text-anchor="middle" fill="#e5e7eb"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="10">
+    숨김
+  </text>
+
+  <!-- 카드 2: 가운데 위 -->
+  <rect x="152" y="102" width="96" height="70" rx="6" fill="rgba(15,23,42,0.7)" />
+  <circle cx="200" cy="137" r="14" fill="none" stroke="#e5e7eb" stroke-width="3" />
+  <line x1="190" y1="127" x2="210" y2="147" stroke="#f97316" stroke-width="3" stroke-linecap="round" />
+  <text x="200" y="162" text-anchor="middle" fill="#e5e7eb"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="10">
+    숨김
+  </text>
+
+  <!-- 좌측 하단 설명 텍스트 -->
+  <text x="44" y="294" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+    입력한 제목과 일치(또는 포함)하는 작품은 목록에서 자동으로 숨겨집니다.
+  </text>
+
+  <!-- 우측: 확장 프로그램 팝업 UI 예시 -->
+  <rect x="390" y="80" width="210" height="260" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5" />
+  <rect x="390" y="80" width="210" height="32" rx="10" fill="#e5e7eb" />
+  <text x="400" y="101" fill="#111827" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">
+    넷플릭스 작품 숨기기 필터
+  </text>
+
+  <!-- 토글 -->
+  <rect x="402" y="122" width="190" height="20" fill="none" />
+  <rect x="402" y="126" width="14" height="14" rx="3" fill="#22c55e" />
+  <polyline points="405,133 408,136 413,129" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="422" y="137" fill="#111827" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+    넷플릭스 작품 숨기기 사용
+  </text>
+
+  <!-- 숨길 제목 textarea 표시 -->
+  <text x="402" y="160" fill="#111827" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+    숨길 작품 이름
+  </text>
+  <rect x="402" y="168" width="190" height="80" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+  <text x="410" y="184" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+    예)
+  </text>
+  <text x="410" y="198" fill="#6b7280" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+    오징어 게임
+  </text>
+  <text x="410" y="212" fill="#6b7280" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+    기묘한 이야기
+  </text>
+
+  <!-- 필터 방식 셀렉트 -->
+  <text x="402" y="262" fill="#111827" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+    필터 방식
+  </text>
+  <rect x="402" y="268" width="190" height="22" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+  <text x="410" y="283" fill="#111827" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+    포함 검색 (공격적)
+  </text>
+  <polygon points="577,276 583,276 580,281" fill="#6b7280" />
+
+  <!-- 저장 버튼 -->
+  <rect x="402" y="298" width="190" height="26" rx="4" fill="#e50914" />
+  <text x="497" y="315" text-anchor="middle" fill="#ffffff"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="11" font-weight="600">
+    저장
+  </text>
+
+  <!-- 힌트 텍스트 -->
+  <text x="402" y="332" fill="#6b7280" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+    저장 후 넷플릭스 페이지를 새로고침하면 해당 작품들이 숨겨집니다.
+  </text>
+</svg>

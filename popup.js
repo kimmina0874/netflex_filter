@@ -1,3 +1,21 @@
+// Helper for localization
+function localizeHtmlPage() {
+  const objects = document.querySelectorAll('[data-i18n]');
+  for (let j = 0; j < objects.length; j++) {
+    const obj = objects[j];
+    const messageId = obj.getAttribute('data-i18n');
+    const msg = chrome.i18n.getMessage(messageId);
+    if (msg) {
+      obj.innerText = msg;
+    }
+  }
+  // Also set placeholder for textarea
+  const textarea = document.getElementById('titles');
+  if (textarea) {
+    textarea.placeholder = chrome.i18n.getMessage('textareaPlaceholder');
+  }
+}
+
 const textarea = document.getElementById('titles');
 const saveButton = document.getElementById('save');
 const statusEl = document.getElementById('status');
@@ -47,7 +65,7 @@ function loadSettingsAndTitles() {
 
 function saveTitles() {
   saveButton.disabled = true;
-  setStatus('저장 중...', '');
+  setStatus(chrome.i18n.getMessage('statusSaving'), '');
 
   const list = parseLines(textarea.value);
 
@@ -72,13 +90,13 @@ function saveTitles() {
           saveButton.disabled = false;
           if (error) {
             setStatus(
-              '저장 중 오류가 발생했습니다.',
+              chrome.i18n.getMessage('statusError'),
               'error'
             );
             return;
           }
           setStatus(
-            '저장되었습니다. 넷플릭스를 새로고침 해주세요.',
+            chrome.i18n.getMessage('statusSaved'),
             'ok'
           );
         }
@@ -109,15 +127,15 @@ function onToggleNetflixTool() {
           const error = chrome.runtime.lastError;
           if (error) {
             setStatus(
-              '설정 저장 중 오류가 발생했습니다.',
+              chrome.i18n.getMessage('statusError'),
               'error'
             );
             return;
           }
           setStatus(
             enabled
-              ? '넷플릭스 작품 숨기기 기능이 켜졌습니다.'
-              : '넷플릭스 작품 숨기기 기능이 꺼졌습니다. 넷플릭스를 새로고침 해주세요.',
+              ? chrome.i18n.getMessage('statusToggleOn')
+              : chrome.i18n.getMessage('statusToggleOff'),
             ''
           );
         }
@@ -127,11 +145,8 @@ function onToggleNetflixTool() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  localizeHtmlPage();
   loadSettingsAndTitles();
   saveButton.addEventListener('click', saveTitles);
-  netflixToolCheckbox.addEventListener(
-    'change',
-    onToggleNetflixTool
-  );
+  netflixToolCheckbox.addEventListener('change', onToggleNetflixTool);
 });
-
